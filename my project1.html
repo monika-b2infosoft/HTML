@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <title>Contact Us</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-section {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 400px;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-section:hover {
+      transform: scale(1.02);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      text-align: center;
+      color: #00796b;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #b2dfdb;
+      border-radius: 8px;
+      font-size: 16px;
+      resize: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #009688;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00796b;
+    }
+
+    #responseMsg {
+      margin-top: 15px;
+      font-size: 14px;
+      color: green;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="contact-section">
+      <h1>Contact Us</h1>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="responseMsg"></p>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const responseMsg = document.getElementById("responseMsg");
+
+      if (!name || !email || !message) {
+        responseMsg.textContent = "Please fill out all fields.";
+        responseMsg.style.color = "red";
+        return;
+      }
+
+      responseMsg.textContent = `Thanks, ${name}! We'll contact you shortly.`;
+      responseMsg.style.color = "green";
+
+      document.getElementById("contactForm").reset();
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
