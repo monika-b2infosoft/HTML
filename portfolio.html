@@ -1,0 +1,98 @@
+<!docktype html>
+<html>
+<head>
+<title>portfolio</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 20px;
+  background: linear-gradient(to right, #333, #777);
+}
+
+.left-text {
+  flex-basis: 40%;
+  text-align: center;
+  color: #fff;
+}
+
+.heading {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+}
+
+.subheading {
+  color: #ddd;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.gallery {
+  flex-basis: 55%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-rows: 120px;
+}
+
+.box {
+    background-size: cover;
+    background-position: top;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #777;
+    background-blend-mode: hard-light;
+    cursor: pointer;
+}
+
+.box:hover {
+    background-color: aqua;
+    background-position: center  ;
+  transform: scale(1.05);
+  box-shadow:0 0 4px #777;
+}
+.row-2{
+    grid-row: span 2;
+}
+.col-2{
+    grid-column: span 2;
+}
+</style>
+<body>
+<div class="container">
+  <div class="left-text">
+    <h2 class="heading">My Portfolio</h2>
+    <p class="subheading">When words become unclear, I shall focus with photographs.when images cecome inddequate.i shall be content with silence.</p>
+  </div>
+
+  <div class="gallery">
+    <div class="box row-2"id="box1" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJDTflHY8DHTpPRNPdOd-pts9a10PkIMk6hQ&s');">image1</div>
+    <div class="box col-2" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiSWf2fFh46s1ETv5T7rb5elZnEJp5hprOLA&s');">image2</div>
+    <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREPP6-VVjZkkM4ah53n66TzIQzXEEa0dBxJw&s');">image3</div>
+    <div class="box row-2" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF7XptNsZnD_P9-du7soVvb54Mazymo-_jgw&s');">image4</div>
+    <div class="box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThnnRN6-w-nXKy1R-HPS0IOa7eBsk7Ji11TQ&s');">image5</div>
+    <div class="box col-2" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgu48tdA-miQNE2UiJjAhhBmZXXsOCwsQLgw&s');">image6</div>
+  </div>
+</div>
+
+</body>
+</html>
